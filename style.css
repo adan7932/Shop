@@ -3,16 +3,17 @@
    =================================== */
 
 :root {
-    --primary-gold: #DAA520;
-    --light-gold: #FFD700;
-    --dark-green: #2F4F4F;
-    --light-green: #5F8A8A;
-    --cream: #F5F1E8;
-    --dark-text: #2C2C2C;
+    --primary-blue: #0066CC;
+    --secondary-blue: #003D99;
+    --accent-teal: #00A3A3;
+    --light-accent: #E8F4F8;
+    --dark-text: #1a1a1a;
     --light-text: #555;
-    --border-color: #D4AF7A;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --border-color: #d0d0d0;
+    --shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+    --shadow-hover: 0 8px 25px rgba(0, 102, 204, 0.2);
+    --success-green: #28a745;
+    --warning-orange: #ff9800;
 }
 
 * {
@@ -26,8 +27,8 @@ html {
 }
 
 body {
-    font-family: 'Georgia', serif;
-    background-color: #f9f7f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
     color: var(--dark-text);
     line-height: 1.6;
 }
@@ -43,9 +44,9 @@ body {
    =================================== */
 
 .navbar {
-    background: linear-gradient(135deg, #3d5a5a 0%, #2F4F4F 100%);
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #003D99 0%, #0066CC 100%);
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -66,29 +67,30 @@ body {
 }
 
 .logo-circle {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
-    border: 3px solid var(--light-gold);
+    width: 55px;
+    height: 55px;
+    background: white;
+    border: 3px solid var(--accent-teal);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--dark-green);
-    font-size: 14px;
-    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.3);
+    color: var(--secondary-blue);
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .brand-info h1 {
-    color: var(--light-gold);
+    color: white;
     font-size: 18px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 0;
+    font-weight: 700;
 }
 
 .brand-info .tagline {
-    color: var(--light-gold);
+    color: var(--light-accent);
     font-size: 11px;
     letter-spacing: 1px;
     margin: 2px 0 0 0;
@@ -110,12 +112,13 @@ body {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     padding: 5px 10px;
+    font-weight: 500;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--light-gold);
-    border-bottom: 2px solid var(--light-gold);
+    color: var(--light-accent);
+    border-bottom: 3px solid var(--accent-teal);
 }
 
 /* ===================================
@@ -123,23 +126,25 @@ body {
    =================================== */
 
 .hero {
-    background: linear-gradient(135deg, #3d5a5a 0%, #2F4F4F 100%);
+    background: linear-gradient(135deg, #0066CC 0%, #00A3A3 100%);
     color: white;
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
 }
 
 .hero-content h2 {
-    font-size: 48px;
+    font-size: 52px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 30px;
-    color: var(--light-gold);
+    color: var(--light-accent);
+    font-weight: 300;
 }
 
 .hero-buttons {
@@ -150,33 +155,24 @@ body {
 }
 
 .page-hero {
-    background: linear-gradient(135deg, #4a7070 0%, #3d5a5a 100%);
+    background: linear-gradient(135deg, #0066CC 0%, #00A3A3 100%);
     color: white;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
-    border-bottom: 4px solid var(--primary-gold);
+    border-bottom: 4px solid var(--accent-teal);
 }
 
 .page-hero h1 {
     font-size: 42px;
     margin-bottom: 15px;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .page-hero p {
     font-size: 18px;
-    color: var(--light-gold);
+    color: var(--light-accent);
     font-style: italic;
-}
-
-.landlord-hero {
-    background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
-    color: var(--dark-green);
-}
-
-.landlord-hero h1,
-.landlord-hero p {
-    color: var(--dark-green);
 }
 
 /* ===================================
@@ -184,35 +180,50 @@ body {
    =================================== */
 
 .btn {
-    padding: 12px 30px;
+    padding: 14px 35px;
     border: none;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
-    font-weight: bold;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
-    color: var(--dark-green);
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--light-gold);
-    border: 2px solid var(--light-gold);
+    background: white;
+    color: var(--primary-blue);
+    border: 3px solid var(--primary-blue);
 }
 
 .btn-secondary:hover {
-    background: var(--light-gold);
-    color: var(--dark-green);
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    font-size: 14px;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-2px);
 }
 
 /* ===================================
@@ -229,13 +240,15 @@ body {
 .products h2,
 .packages h2,
 .process h2,
-.faq h2 {
+.faq h2,
+.reviews h2 {
     text-align: center;
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 50px;
     color: var(--dark-text);
     position: relative;
     padding-bottom: 20px;
+    font-weight: 700;
 }
 
 .services h2::after,
@@ -248,8 +261,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-gold), var(--light-gold));
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal));
 }
 
 .services-grid {
@@ -259,19 +272,19 @@ body {
 }
 
 .service-card {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
     padding: 40px 25px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
-    border: 2px solid #e8dcc8;
+    border: 2px solid var(--border-color);
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-gold);
+    border-color: var(--accent-teal);
 }
 
 .service-icon {
@@ -282,24 +295,28 @@ body {
 .service-card h3 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: var(--dark-green);
+    color: var(--primary-blue);
+    font-weight: 700;
 }
 
 .service-card p {
     color: var(--light-text);
     margin-bottom: 20px;
     font-size: 14px;
+    line-height: 1.7;
 }
 
 .service-link {
-    color: var(--primary-gold);
+    color: var(--primary-blue);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .service-link:hover {
-    color: var(--light-gold);
+    color: var(--accent-teal);
+    transform: translateX(5px);
 }
 
 /* ===================================
@@ -308,7 +325,7 @@ body {
 
 .why-choose {
     padding: 80px 20px;
-    background: white;
+    background: var(--light-accent);
 }
 
 .features-grid {
@@ -318,11 +335,12 @@ body {
 }
 
 .feature {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: white;
     padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid var(--primary-gold);
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-blue);
     transition: all 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .feature:hover {
@@ -332,21 +350,23 @@ body {
 
 .feature-number {
     font-size: 28px;
-    color: var(--primary-gold);
-    font-weight: bold;
+    color: var(--accent-teal);
+    font-weight: 700;
     display: block;
     margin-bottom: 10px;
 }
 
 .feature h4 {
     font-size: 18px;
-    color: var(--dark-green);
+    color: var(--primary-blue);
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .feature p {
     color: var(--light-text);
     font-size: 14px;
+    line-height: 1.7;
 }
 
 /* ===================================
@@ -355,23 +375,88 @@ body {
 
 .landlord-preview {
     padding: 80px 20px;
-    background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
     text-align: center;
 }
 
 .landlord-content h2 {
     font-size: 36px;
-    color: var(--dark-green);
+    color: white;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .landlord-content p {
     font-size: 16px;
-    color: var(--dark-green);
+    color: var(--light-accent);
     margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* ===================================
+   Reviews Section
+   =================================== */
+
+.reviews {
+    padding: 80px 20px;
+    background: white;
+}
+
+.reviews h2 {
+    margin-bottom: 50px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stars {
+    color: var(--warning-orange);
+    font-size: 18px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    color: var(--light-text);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.reviewer-info {
+    border-top: 2px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-size: 15px;
+}
+
+.reviewer-role {
+    color: var(--light-text);
+    font-size: 13px;
 }
 
 /* ===================================
@@ -386,7 +471,7 @@ body {
 .intro-section {
     text-align: center;
     margin-bottom: 60px;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -395,11 +480,13 @@ body {
     font-size: 32px;
     color: var(--dark-text);
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .intro-section p {
     font-size: 16px;
     color: var(--light-text);
+    line-height: 1.8;
 }
 
 /* ===================================
@@ -418,8 +505,8 @@ body {
 
 .product-card {
     background: white;
-    border: 2px solid #e8dcc8;
-    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
@@ -428,41 +515,52 @@ body {
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-gold);
+    border-color: var(--accent-teal);
 }
 
 .product-image {
-    height: 200px;
-    background: linear-gradient(135deg, #8B4513, #D2B48C);
+    height: 220px;
+    background: linear-gradient(135deg, #e8f4f8, #d0e8f2);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
+    font-size: 80px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .badge {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: var(--primary-gold);
-    color: var(--dark-green);
+    background: var(--accent-teal);
+    color: white;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .product-card h3 {
     font-size: 22px;
-    color: var(--dark-green);
+    color: var(--primary-blue);
     padding: 25px 25px 10px 25px;
     margin: 0;
+    font-weight: 700;
 }
 
 .product-card p {
     padding: 0 25px;
     color: var(--light-text);
     font-size: 14px;
+    line-height: 1.7;
 }
 
 .features {
@@ -475,13 +573,16 @@ body {
     padding: 8px 0;
     color: var(--light-text);
     font-size: 14px;
+    padding-left: 25px;
+    position: relative;
 }
 
-.price {
-    padding: 20px 25px 25px 25px;
-    color: var(--primary-gold);
-    font-size: 18px;
-    font-weight: bold;
+.features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 700;
 }
 
 /* ===================================
@@ -506,11 +607,12 @@ body {
 }
 
 .service-item {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
     padding: 30px;
-    border-radius: 8px;
-    border-top: 4px solid var(--primary-gold);
+    border-radius: 10px;
+    border-top: 4px solid var(--primary-blue);
     transition: all 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .service-item:hover {
@@ -520,13 +622,15 @@ body {
 
 .service-item h4 {
     font-size: 18px;
-    color: var(--dark-green);
+    color: var(--primary-blue);
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .service-item p {
     color: var(--light-text);
     font-size: 14px;
+    line-height: 1.7;
 }
 
 /* ===================================
@@ -535,9 +639,9 @@ body {
 
 .cta-section {
     text-align: center;
-    background: linear-gradient(135deg, #3d5a5a 0%, #2F4F4F 100%);
+    background: linear-gradient(135deg, #0066CC 0%, #003D99 100%);
     padding: 60px 40px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin: 80px 0;
 }
 
@@ -545,146 +649,13 @@ body {
     color: white;
     font-size: 32px;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .cta-section p {
-    color: var(--light-gold);
+    color: var(--light-accent);
     font-size: 16px;
     margin-bottom: 30px;
-}
-
-/* ===================================
-   Room Solutions
-   =================================== */
-
-.room-solutions h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.room-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-bottom: 80px;
-}
-
-.room-card {
-    background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.room-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.room-card h4 {
-    color: var(--dark-green);
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.room-card p {
-    color: var(--dark-green);
-    font-size: 14px;
-}
-
-/* ===================================
-   Appliance Categories
-   =================================== */
-
-.appliance-categories h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    margin-bottom: 80px;
-}
-
-.category {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    border: 2px solid #e8dcc8;
-    transition: all 0.3s ease;
-}
-
-.category:hover {
-    border-color: var(--primary-gold);
-    box-shadow: var(--shadow-hover);
-}
-
-.category h4 {
-    color: var(--dark-green);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.category p {
-    color: var(--light-text);
-    font-size: 14px;
-}
-
-/* ===================================
-   Landlord Benefits
-   =================================== */
-
-.landlord-benefits {
-    margin-bottom: 80px;
-}
-
-.landlord-benefits h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.benefit-card {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    border: 2px solid #e8dcc8;
-    transition: all 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--primary-gold);
-}
-
-.benefit-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.benefit-card h3 {
-    color: var(--dark-green);
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.benefit-card p {
-    color: var(--light-text);
-    font-size: 14px;
 }
 
 /* ===================================
@@ -699,6 +670,7 @@ body {
     text-align: center;
     font-size: 32px;
     margin-bottom: 50px;
+    color: var(--dark-text);
 }
 
 .packages-grid {
@@ -709,23 +681,24 @@ body {
 
 .package-card {
     background: white;
-    border: 2px solid #e8dcc8;
-    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
     padding: 40px 30px;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
+    box-shadow: var(--shadow);
 }
 
 .package-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-gold);
+    border-color: var(--accent-teal);
 }
 
 .package-card.featured {
-    border: 3px solid var(--primary-gold);
-    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
+    border: 3px solid var(--primary-blue);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
 }
 
 .popular-badge {
@@ -733,18 +706,20 @@ body {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--primary-gold);
-    color: var(--dark-green);
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+    color: white;
     padding: 8px 20px;
     border-radius: 20px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .package-card h3 {
     font-size: 24px;
-    color: var(--dark-green);
+    color: var(--primary-blue);
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .package-desc {
@@ -759,7 +734,7 @@ body {
     text-align: left;
     margin: 30px 0;
     padding: 20px;
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: var(--light-accent);
     border-radius: 6px;
 }
 
@@ -767,53 +742,21 @@ body {
     padding: 10px 0;
     color: var(--light-text);
     font-size: 14px;
-    border-bottom: 1px solid #e8dcc8;
+    border-bottom: 1px solid #d0d0d0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.package-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 700;
 }
 
 .package-features li:last-child {
     border-bottom: none;
-}
-
-.package-price {
-    font-size: 24px;
-    color: var(--primary-gold);
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-/* ===================================
-   Landlord Products
-   =================================== */
-
-.landlord-products h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.products-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
-    margin-bottom: 80px;
-}
-
-.product-info-item {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid var(--primary-gold);
-}
-
-.product-info-item h3 {
-    color: var(--dark-green);
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.product-info-item p {
-    color: var(--light-text);
-    font-size: 14px;
 }
 
 /* ===================================
@@ -834,9 +777,9 @@ body {
 }
 
 .step {
-    background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
     position: relative;
 }
@@ -845,23 +788,24 @@ body {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background: var(--dark-green);
-    color: white;
+    background: white;
+    color: var(--primary-blue);
     border-radius: 50%;
     line-height: 50px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
 .step h4 {
-    color: var(--dark-green);
+    color: white;
     font-size: 18px;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .step p {
-    color: var(--dark-green);
+    color: var(--light-accent);
     font-size: 14px;
 }
 
@@ -886,23 +830,26 @@ body {
 }
 
 .contact-card {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
     padding: 40px 30px;
-    border-radius: 8px;
-    border: 2px solid #e8dcc8;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .contact-card:hover {
-    border-color: var(--primary-gold);
+    border-color: var(--accent-teal);
     box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
 }
 
 .contact-card h3 {
     font-size: 22px;
-    color: var(--dark-green);
+    color: var(--primary-blue);
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .contact-card p {
@@ -912,14 +859,14 @@ body {
 }
 
 .contact-link {
-    color: var(--primary-gold);
+    color: var(--primary-blue);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
 .contact-link:hover {
-    color: var(--light-gold);
+    color: var(--accent-teal);
 }
 
 /* ===================================
@@ -942,10 +889,11 @@ body {
 }
 
 .contact-form {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
     padding: 40px;
-    border-radius: 8px;
-    border: 2px solid #e8dcc8;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
 }
 
 .form-group {
@@ -961,8 +909,8 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 10px;
-    color: var(--dark-green);
-    font-weight: bold;
+    color: var(--primary-blue);
+    font-weight: 700;
     font-size: 14px;
 }
 
@@ -971,19 +919,20 @@ body {
 .form-group select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d4af7a;
-    border-radius: 4px;
-    font-family: 'Georgia', serif;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     background: white;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--primary-gold);
-    box-shadow: 0 0 8px rgba(218, 165, 32, 0.2);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
 }
 
 .form-group textarea {
@@ -1015,11 +964,12 @@ body {
    =================================== */
 
 .location-info {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
     padding: 40px;
-    border-radius: 8px;
-    border: 2px solid #e8dcc8;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
     margin-bottom: 80px;
+    box-shadow: var(--shadow);
 }
 
 .location-info h2 {
@@ -1043,6 +993,7 @@ body {
     text-align: center;
     font-size: 32px;
     margin-bottom: 50px;
+    color: var(--dark-text);
 }
 
 .faq-grid {
@@ -1052,27 +1003,31 @@ body {
 }
 
 .faq-item {
-    background: linear-gradient(135deg, #f9f7f2 0%, #f5f1e8 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
     padding: 30px;
-    border-radius: 8px;
-    border: 2px solid #e8dcc8;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
     transition: all 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .faq-item:hover {
-    border-color: var(--primary-gold);
+    border-color: var(--accent-teal);
     box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
 }
 
 .faq-item h4 {
-    color: var(--dark-green);
+    color: var(--primary-blue);
     font-size: 16px;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .faq-item p {
     color: var(--light-text);
     font-size: 14px;
+    line-height: 1.7;
 }
 
 /* ===================================
@@ -1080,10 +1035,10 @@ body {
    =================================== */
 
 footer {
-    background: linear-gradient(135deg, #3d5a5a 0%, #2F4F4F 100%);
+    background: linear-gradient(135deg, #003D99 0%, #0066CC 100%);
     color: #e0e0e0;
     padding: 50px 20px 20px 20px;
-    border-top: 3px solid var(--primary-gold);
+    border-top: 4px solid var(--accent-teal);
 }
 
 .footer-grid {
@@ -1094,10 +1049,11 @@ footer {
 }
 
 .footer-section h4 {
-    color: var(--light-gold);
+    color: var(--light-accent);
     font-size: 16px;
     margin-bottom: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
 .footer-section p,
@@ -1113,7 +1069,7 @@ footer {
 }
 
 .footer-section a {
-    color: var(--light-gold);
+    color: var(--light-accent);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -1175,14 +1131,15 @@ footer {
     .services h2,
     .why-choose h2,
     .products h2,
-    .intro-section h2 {
+    .intro-section h2,
+    .reviews h2 {
         font-size: 28px;
     }
 
     .services-grid,
     .features-grid,
     .products-grid,
-    .room-grid,
+    .reviews-grid,
     .benefits-grid,
     .packages-grid,
     .faq-grid {
@@ -1204,5 +1161,10 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 13px;
     }
 }
