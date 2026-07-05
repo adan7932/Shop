@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App - Local Storage</title>
+    <link rel="stylesheet" href="todo-style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📝 My Todo List</h1>
+            <p class="subtitle">Keep track of your tasks</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <button class="add-btn" onclick="addTodo()">Add Task</button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterTodos('all')">All</button>
+                <button class="filter-btn" onclick="filterTodos('active')">Active</button>
+                <button class="filter-btn" onclick="filterTodos('completed')">Completed</button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Tasks:</span>
+                <span class="stat-value" id="totalTasks">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Completed:</span>
+                <span class="stat-value completed" id="completedTasks">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Remaining:</span>
+                <span class="stat-value pending" id="remainingTasks">0</span>
+            </div>
+        </div>
+
+        <!-- Todo List -->
+        <div class="todo-list" id="todoList">
+            <!-- Todos will be inserted here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">✨</div>
+            <p>No tasks yet. Add one to get started!</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn btn-secondary" onclick="clearCompleted()">Clear Completed</button>
+            <button class="btn btn-danger" onclick="clearAll()">Clear All</button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Your tasks are automatically saved to your browser's local storage</p>
+        </footer>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
